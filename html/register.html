@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-kiri">
+            <img src="../assets/logo/logo.png" width="40%" height="40%">
+        </div>
+        <div class="navbar-kanan">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="songCollection.html" class="dropbtn">Song Collection ▼</a>
+                    <div class="dropdown-content">
+                        <a href="songCollection.html#pop">Pop</a>
+                        <a href="songCollection.html#rnb">R&B</a>
+                        <a href="songCollection.html#kpop">K-Pop</a>
+                    </div>
+                </li>
+                <li><a href="register.html" class="current-page">Register</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Register -->
+    <!-- This page provides a registration menu for the customer. Customer needs to submit some personal information such as name, email, password, age, and gender. You are also asked to create 5 kinds of form components and 5 kinds of validation. For validation, you must create it using JavaScript and don’t use regular expression. -->
+    <form action="home.html" id="form-container" onsubmit="return validate_all()">
+        <h2>Register</h2>
+
+        <!-- Name -->
+        <h4>Name</h4>
+        <input type="text" placeholder="Enter your full name" id="name_input" onchange="validate_name()">
+        <p class="error_msg" id="name_error"></p>
+        
+        <!-- Email -->
+        <h4>Email</h4>
+        <input type="email" placeholder="example@gmail.com" id="email_input" onkeyup="validate_email()">
+        <p class="error_msg" id="email_error"></p>
+
+        <!-- Password -->
+        <h4>Password</h4>
+        <input type="password" placeholder="Enter your password" id="password_input" onkeyup="validate_password()">
+        <p class="error_msg" id="password_error"></p>
+        
+        <h4>Age</h4>
+        <!-- Age -->
+        <input type="number" placeholder="Enter your age" id="age_input" onchange="validate_age()">
+        <p class="error_msg" id="age_error"></p>
+        
+        <!-- Gender -->
+        <h4>Gender</h4>
+        <div>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+        </div>
+        <p class="error_msg" id="gender_error"></p>
+
+        <!-- Submit -->
+        <button type="submit" id="register_btn">Register</button>
+    </form>
+    
+    <img class="bg" src="../assets/bg/bg_register.jpg" alt="bg">
+
+    <script src="../script/register.js"></script>
+</body>
+</html>

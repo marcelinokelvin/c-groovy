@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: indigo;
+    display: flex;  
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    font-family: Arial, sans-serif;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 35vw;
+    padding-right: 90px;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.current-page {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: indigo;
+    min-width: 100px;
+    top: 100%;
+    right: 0;
+    border-radius: 0 0 10px 10px;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.dropdown-content a:hover {
+    background-color: rebeccapurple;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+/* Content Start */
+.content {
+    margin-top: 70px;
+    background-color: #f8f8ff;
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.uvp-text {
+    z-index: 99;
+    position: absolute;
+    top: 40vh;
+    left: 5vw;
+    font-size: xx-large;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Song Section */
+.song-section {
+    padding: 60px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.song-section h1 {
+    font-size: 32px;
+    color: indigo;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Song Card Style */
+.song-card {
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.song-card:hover {
+    transform: scale(1.03);
+}
+
+.song-card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Description inside Card */
+.card-description {
+    padding: 10px;
+}
+
+.song-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.song-artist {
+    font-size: 16px;
+    color: indigo;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.song-info {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Carousel */
+.carousel-container h1 {
+    font-size: 32px;
+    font-family: Arial, sans-serif;
+    color: indigo;
+    margin-bottom: 40px;
+}
+
+.carousel-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-card-container{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.slide{
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: ease-in-out;
+}
+
+.carousel-song-card{
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.carousel-song-card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Arrow */
+.carousel-arrow{
+    margin: 0 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    border-radius: 100%;
+    cursor: pointer;
+    color: indigo;
+}
+
+.carousel-container {
+    margin-bottom: 80px;
+}
+
+.card-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.slide a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .navbar ul {
+        width: 60vw;
+        padding-right: 20px;
+    }
+
+    .card-container {
+        gap: 20px;
+    }
+
+    .song-card {
+        width: 250px;
+    }
+
+    .carousel-container {
+        margin-bottom: 40px;
+    }
+
+    .carousel-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 40px;
+        margin: 0 10px;
+    }
+
+    .slide {
+        width: 250px;
+    }
+}
