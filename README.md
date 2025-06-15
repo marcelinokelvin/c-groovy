@@ -1,6 +1,6 @@
-# C'Groovy Web Application
+# C'Groovy Web Application Project
 
-A responsive web application developed for **C'Groovy**, a fictional music streaming company, as part of the **ISYS6211 Web Based Application Development** course, Bina Nusantara University.
+A responsive web application developed for **C'Groovy**, a fictional music streaming company, as part of the **ISYS6211003 - Web Based Application Development** course, Bina Nusantara University.
 
 ## 📁 Project Structure
 This project includes the following pages:
